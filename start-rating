@@ -1,0 +1,35 @@
+/* Basic star rating styling */
+.star-rating {
+  direction: ltr;
+  font-size: 1.5em; /* Adjust the size if needed */
+  unicode-bidi: bidi-override;
+  display: inline-block;
+}
+
+.star-rating > input {
+  display: none; /* Hide radio inputs */
+}
+
+.star-rating > label {
+  color: #ddd; /* Default star color */
+  cursor: pointer;
+  display: inline-block;
+  font-size: 2em;
+  transition: color 0.2s;
+}
+
+/* Color the stars on hover */
+.star-rating > label:hover,
+.star-rating > label:hover ~ label {
+  color: #45AF6A;
+}
+
+/* Color the stars that are checked */
+.star-rating > input:checked ~ label {
+  color: #45AF6A;
+}
+
+/* Add a slight animation on the stars */
+.star-rating > label {
+  transition: color 0.3s ease-in-out;
+}
